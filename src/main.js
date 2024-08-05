@@ -1,5 +1,12 @@
-// import { Header } from './components/Header.js';
+import { render, router } from './tools/fakejs.js';
+import { App } from './App.js';
+import { Home } from './components/Home.js';
+import { Contact } from './components/Contact.js';
 
-// const root = document.querySelector('#root');
+render(App);
 
-// console.log(Header());
+router({
+    '/': App,
+    '/home': Home,
+    '/contact': Contact
+});
