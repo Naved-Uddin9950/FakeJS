@@ -1,5 +1,5 @@
 import { Header } from './components/Header.js';
-import { render, router } from './tools/framework.js';
+import { render, router } from './tools/fakejs.js';
 
 const App = `
      <div>
