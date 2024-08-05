@@ -1,33 +1,28 @@
 import { render } from "./fakejs";
 
+window.addEventListener('load', () => {
+    const links = document.querySelectorAll('a');
 
-const link = document.querySelectorAll('a');
-
-if (link && link.length > 0) {
-    link.map((item) => {
+    links.forEach((item) => {
         item.addEventListener('click', (e) => {
             e.preventDefault();
-            console.log(item);
+            const route = item.getAttribute('href');
+
+            // Update the browser URL and state without reloading
+            window.history.replaceState(null, '', route);
         });
     });
-}
+});
 
 export const router = (container) => {
     const url = window.location.pathname;
-    let urlArray = url.split('.')
+    const routeAddress = url.endsWith('/') ? url.slice(0, -1) : url;
+    const page = container[routeAddress] || container['/'];
 
-    if (urlArray.length > 1) {
-        urlArray.pop();
-    }
+    render(page);
+    history.replaceState(null, '', routeAddress);
 
-    const routeAddress = urlArray.join('');
-
-    Object.entries(container).forEach(([route, page]) => {
-        if (routeAddress.toLowerCase() === route.toLowerCase()) {
-            render(page);
-            history.replaceState(null, '', route.toLowerCase());
-        }
-    });
+    return container;
 };
 
 export const useLink = () => {
