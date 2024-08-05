@@ -1,0 +1,38 @@
+{
+  "name": "frontend-framework-dev",
+  "version": "1.0.0",
+  "description": "A JavaScript based frontend framework for fast project development",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Naved-Uddin9950/FakeJS.git"
+  },
+  "keywords": [
+    "javascript",
+    "framework",
+    "javascript",
+    "framework",
+    "fakejs",
+    "fake.js",
+    "fake",
+    "js",
+    "fakejs",
+    "framework"
+  ],
+  "author": "Naved Uddin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Naved-Uddin9950/FakeJS/issues"
+  },
+  "homepage": "https://github.com/Naved-Uddin9950/FakeJS#readme",
+  "devDependencies": {
+    "eslint": "^9.8.0",
+    "vite": "^5.3.5"
+  }
+}
